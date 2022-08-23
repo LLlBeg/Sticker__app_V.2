@@ -12,15 +12,15 @@ export const getSticker = (id) => {
 
 export const addSticker = (sticker) => {
   if (sticker) return axios.post(baseURL, sticker);
-  return Promise.reject("No sticker found in params");
+  return Promise.reject("Stiker not found in params");
 };
 
 export const updateSticker = (id, description) => {
   if (id) return axios.put(`${baseURL}/${id}`, { description });
-  return Promise.reject("No id found in params");
+  return Promise.reject("Id no found");
 };
 
 export const removeSticker = (id) => {
   if (id) return axios.delete(`${baseURL}/${id}`);
-  return Promise.reject("No id found in params");
+  return Promise.reject("Id no found");
 };
